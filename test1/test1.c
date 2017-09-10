@@ -17,6 +17,7 @@
   多打印几行文本
   查看man puts
 
+以上为原注释：
 
 */
 
@@ -24,9 +25,9 @@
 #include <stdlib.h> //没有这个不能使用pause这一系统命令，注释掉这行看看
 int main(int argc, char *argv[])
 {
-  system("pause");//加入一暂停
+  system("pause");//加入暂停
   puts("hello world");
-  puts("选择936编码或ansi试试");
+  puts("用中文的选择936编码或ansi试试");
   (system("pause"));//学习暂停命令
   return 0;
 }
