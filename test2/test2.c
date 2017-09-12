@@ -1,10 +1,10 @@
 /*
-1. 创建目标 all:test2
+1. 创建目标 all:ex1
 2. 找一个C的项目，尝试学习理解它的Makefile，并看能否改进本例中的Makefile
    https://notabug.org/koz.ross/awesome-c
 
    https://github.com/DaveGamble/cJSON/blob/master/Makefile
-
+g++ -Wall -g -o1 -m32 -o test2.exe test2.c
 */
 
 #include <stdio.h>
