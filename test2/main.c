@@ -4,7 +4,10 @@
    https://notabug.org/koz.ross/awesome-c
 
    https://github.com/DaveGamble/cJSON/blob/master/Makefile
-g++ -Wall -g -o1 -m32 -o test2.exe test2.c
+   
+   
+   用下行的命令生成utf8编码并在命令台正常显示出来试试：
+g++ -Wall -g -o1 -fexec-charset=utf-8 -finput-charset=gb2312 -m32 -o main main.c
 */
 
 #include <stdio.h>
