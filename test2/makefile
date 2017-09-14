@@ -4,7 +4,8 @@ CC=g++
 #CFLAGS=-Wall -g -o1
 #Wall警告/g调试/o优化等级1-4
 #-fexec-charset=utf-8 -finput-charset=gb2312
-#输出字符，这句基本没用了，官方网站有人提交这个bug
+#输出字符，有人说没用了，实测有用的！win7 x64平台，5.0.2版mingw默认的7.1.0版gcc
+#注意输出为utf-8,在命令台输入chcp 65001然后字体改成Licida
 
 all:32main
 all:64main
@@ -19,7 +20,7 @@ all:64main
 64main.o:main.c
 	g++ -Wall -g -o1 -c -m64 main.c -o 64main.o
 
-#gcc和gcc必需是缩进符而不是空格，否则出错
+#上段中g++或gcc前必需是缩进符而不是空格，否则出错
 
 clean:
 	rm -f *.exe *.o
