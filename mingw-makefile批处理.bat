@@ -16,6 +16,7 @@ echo 清空生成的文件………………5
 echo 退出……………………………6
 echo ================================
 
+set UserSelection=nul
 set /p UserSelection=选择 ( 1 , 2 ，3，4，5，6)
 if "!UserSelection!"=="6" (
 	exit

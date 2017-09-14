@@ -46,16 +46,16 @@ endif
 .PHONY : all clean
 
 # files,需要增加代码文件或依赖关系时，修改此项
-TARGETS = bit
-OBJS = bit.o
+TARGETS = main
+OBJS = main.o
 
 all : $(TARGETS)
 
-bit : $(OBJS)
+main : $(OBJS)
 	$(CC) $(LFLAGS) -o $@ $^
 #说明：$@--目标文件，$^--所有的依赖文件，$<--第一个依赖文件。
 
-bit.o : bit.cpp
+main.o : main.cpp
 	$(CC) $(CFLAGS) -c $<
 
 

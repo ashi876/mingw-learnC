@@ -18,7 +18,8 @@
   查看man puts
 
 以上为原注释：
-
+以下：
+makefile将从下课开始讲解
 */
 
 #include <stdio.h>
