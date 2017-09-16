@@ -1,7 +1,7 @@
 /*
 格式化输出: printf语句
 
-执行命令 : make ex3
+执行命令 : make
 语句说明：
 
 1. 头文件stdio.h中，定义了printf函数

@@ -25,6 +25,7 @@ if "!UserSelection!"=="6" (
 
 if "!UserSelection!"=="5" (
 	make clean
+	@echo 正在清空生成的文件
 	ping -n 2 127.1 > nul&CLS
 	::@del /f /a /s /q %cd%\build\* 2>nul
 	rd /q /s %cd%\build
@@ -53,7 +54,7 @@ if "!UserSelection!"=="1" (
 copy *.exe %cd%\build\
 make clean
 ::备份当前目录下所有exe文件到build目录
-::	pause
+pause
 goto menu
 pause
 
