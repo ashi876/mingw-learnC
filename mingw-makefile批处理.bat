@@ -51,7 +51,7 @@ if "!UserSelection!"=="1" (
 )
 
 @if not exist %cd%\build md %cd%\build
-copy *.exe %cd%\build\
+@if exist *.exe copy *.exe %cd%\build\ 2>nul
 make clean
 ::备份当前目录下所有exe文件到build目录
 pause
