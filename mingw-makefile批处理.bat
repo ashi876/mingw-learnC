@@ -6,15 +6,16 @@ mode con: cols=60 lines=25
 cls>nul
 :menu
 ping -n 1 127.1 > nul&CLS
-echo 多次编译时每次先执行〈命令5〉
-echo ================================
-echo 32位的debug版 ………………1
-echo 64位的debug版 ………………2
-echo 32位的release版 ……………3
-echo 64位的release版 ……………4
-echo 清空生成的文件………………5
-echo 退出……………………………6
-echo ================================
+echo =编译好的文件将放在build文件夹内
+echo ========================================
+echo =　编译32位的debug版 ………………………1
+echo =　编译64位的debug版 ………………………2
+echo =　编译32位的release版 ……………………3
+echo =　编译64位的release版 ……………………4
+echo =　清空build文件夹 …………………………5
+echo =　退出…………………………………………6
+echo ========================================
+
 
 set UserSelection=nul
 set /p UserSelection=选择 ( 1 , 2 ，3，4，5，6)
@@ -24,7 +25,13 @@ if "!UserSelection!"=="6" (
 
 if "!UserSelection!"=="5" (
 	make clean
+	ping -n 2 127.1 > nul&CLS
+	::@del /f /a /s /q %cd%\build\* 2>nul
+	rd /q /s %cd%\build
+::	pause
+	goto menu
 )
+
 
 if "!UserSelection!"=="4" (
 	make RELEASE=1 BITS=64
@@ -42,6 +49,11 @@ if "!UserSelection!"=="1" (
 	make RELEASE=0 BITS=32
 )
 
+@if not exist %cd%\build md %cd%\build
+copy *.exe %cd%\build\
+make clean
+::备份当前目录下所有exe文件到build目录
+::	pause
 goto menu
 pause
 
