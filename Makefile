@@ -18,6 +18,10 @@ RELEASE =0
 BITS =
 #生成文件的位数。本程序中可以用命令参数指定。
 
+#INCLUDE_DIR = 例:INCLUDE_DIR = .\include
+#LIB =  例:LIB = gdi32 ole32
+#使用-I$(INCLUDE_DIR) $(LIB:%=-l%)参数加挂文件头和库
+
 # [args] 生成模式. 0代表debug模式, 1代表release模式.命令为make RELEASE=0或1
 ifeq ($(RELEASE),0)
     # debug#debug版：加上 -g 参数，生成调试信息。
@@ -58,7 +62,7 @@ main : $(OBJS)
 	$(CC) $(LFLAGS) -o $@$(AA)$(BB) $^
 #说明：$@--目标文件，本例就是main.exe,$^--所有的依赖文件OBJS =后的文件，$<--第一个依赖文件。
 	
-main.o : main.cpp
+main.o : main.c
 	$(CC) $(CFLAGS) -c $<
 #说明：$<--第一个依赖文件,上行改成$^试试
 
