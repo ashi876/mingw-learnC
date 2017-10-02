@@ -17,6 +17,9 @@ RELEASE =0
 #上行(0为debug版，1为release版)，本程序中可以用命令参数指定。
 BITS =
 #生成文件的位数。本程序中可以用命令参数指定。
+LANGUAGE=
+#-finput-charset 指定源文件的编码（若不指定，默认是UTF-8）
+#-fexec-charset 指定多字节字符串
 
 #INCLUDE_DIR = 例:INCLUDE_DIR = .\include
 #LIB =  例:LIB = gdi32 ole32
