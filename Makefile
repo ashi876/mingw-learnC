@@ -20,6 +20,8 @@ BITS =
 LANGUAGE=
 #-finput-charset 指定源文件的编码（若不指定，默认是UTF-8）
 #-fexec-charset 指定多字节字符串
+WINDOW=
+#-mwindows加上参数关掉程序输出黑窗
 
 #INCLUDE_DIR = 例:INCLUDE_DIR = .\include
 #LIB =  例:LIB = gdi32 ole32
