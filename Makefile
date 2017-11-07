@@ -18,8 +18,8 @@ RELEASE =0
 BITS =
 #生成文件的位数。本程序中可以用命令参数指定。
 LANGUAGE=
-#-finput-charset 指定源文件的编码（若不指定，默认是UTF-8）
-#-fexec-charset 指定多字节字符串
+#-finput-charset= 指定源文件的编码（若不指定，默认是UTF-8）
+#-fexec-charset= 指定多字节字符串
 WINDOW=
 #-mwindows加上参数关掉程序输出黑窗
 
