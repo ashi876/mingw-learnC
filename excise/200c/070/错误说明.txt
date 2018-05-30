@@ -1,0 +1,1 @@
+没有gotoxy，这是个老函数．mingw64里gcc没有
